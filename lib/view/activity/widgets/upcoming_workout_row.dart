@@ -16,7 +16,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
     bool positive = false;
     return Container(
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
-        padding: const EdgeInsets.all( 10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: AppColors.whiteColor,
             borderRadius: BorderRadius.circular(15),
@@ -37,25 +37,24 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
             ),
             Expanded(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      widget.wObj["title"].toString(),
-                      style: TextStyle(
-                          color: AppColors.blackColor,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Text(
-                      widget.wObj["time"].toString(),
-                      style: TextStyle(
-                        color: AppColors.grayColor,
-                        fontSize: 10,
-                      ),
-                    ),
-                  ],
-                )),
-
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.wObj["title"].toString(),
+                  style: TextStyle(
+                      color: AppColors.blackColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  widget.wObj["time"].toString(),
+                  style: TextStyle(
+                    color: AppColors.grayColor,
+                    fontSize: 10,
+                  ),
+                ),
+              ],
+            )),
             CustomAnimatedToggleSwitch<bool>(
               current: positive,
               values: [false, true],
@@ -80,9 +79,10 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
                         height: 30.0,
                         child: DecoratedBox(
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: AppColors.secondaryG),
+                            gradient:
+                                LinearGradient(colors: AppColors.secondaryG),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(50.0)),
+                                const BorderRadius.all(Radius.circular(50.0)),
                           ),
                         )),
                     child,
@@ -96,7 +96,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
                     decoration: BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius:
-                      const BorderRadius.all(Radius.circular(50.0)),
+                          const BorderRadius.all(Radius.circular(50.0)),
                       boxShadow: const [
                         BoxShadow(
                             color: Colors.black38,

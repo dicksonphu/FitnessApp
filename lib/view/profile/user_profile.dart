@@ -14,11 +14,14 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
-
   bool positive = false;
 
   List accountArr = [
-    {"image": "assets/icons/p_personal.png", "name": "Personal Data", "tag": "1"},
+    {
+      "image": "assets/icons/p_personal.png",
+      "name": "Personal Data",
+      "tag": "1"
+    },
     {"image": "assets/icons/p_achi.png", "name": "Achievement", "tag": "2"},
     {
       "image": "assets/icons/p_activity.png",
@@ -34,7 +37,11 @@ class _UserProfileState extends State<UserProfile> {
 
   List otherArr = [
     {"image": "assets/icons/p_contact.png", "name": "Contact Us", "tag": "5"},
-    {"image": "assets/icons/p_privacy.png", "name": "Privacy Policy", "tag": "6"},
+    {
+      "image": "assets/icons/p_privacy.png",
+      "name": "Privacy Policy",
+      "tag": "6"
+    },
     {"image": "assets/icons/p_setting.png", "name": "Setting", "tag": "7"},
   ];
 
@@ -122,9 +129,7 @@ class _UserProfileState extends State<UserProfile> {
                     child: RoundButton(
                       title: "Edit",
                       type: RoundButtonType.primaryBG,
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                     ),
                   )
                 ],
@@ -165,7 +170,7 @@ class _UserProfileState extends State<UserProfile> {
               ),
               Container(
                 padding:
-                const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
                     color: AppColors.whiteColor,
                     borderRadius: BorderRadius.circular(15),
@@ -207,7 +212,7 @@ class _UserProfileState extends State<UserProfile> {
               ),
               Container(
                 padding:
-                const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
                     color: AppColors.whiteColor,
                     borderRadius: BorderRadius.circular(15),
@@ -250,10 +255,9 @@ class _UserProfileState extends State<UserProfile> {
                             CustomAnimatedToggleSwitch<bool>(
                               current: positive,
                               values: [false, true],
-                              dif: 0.0,
                               indicatorSize: Size.square(30.0),
                               animationDuration:
-                              const Duration(milliseconds: 200),
+                                  const Duration(milliseconds: 200),
                               animationCurve: Curves.linear,
                               onChanged: (b) => setState(() => positive = b),
                               iconBuilder: (context, local, global) {
@@ -269,15 +273,14 @@ class _UserProfileState extends State<UserProfile> {
                                     Positioned(
                                         left: 10.0,
                                         right: 10.0,
-
                                         height: 30.0,
                                         child: DecoratedBox(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(
                                                 colors: AppColors.secondaryG),
                                             borderRadius:
-                                            const BorderRadius.all(
-                                                Radius.circular(30.0)),
+                                                const BorderRadius.all(
+                                                    Radius.circular(30.0)),
                                           ),
                                         )),
                                     child,
@@ -314,7 +317,7 @@ class _UserProfileState extends State<UserProfile> {
               ),
               Container(
                 padding:
-                const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
                     color: AppColors.whiteColor,
                     borderRadius: BorderRadius.circular(15),
